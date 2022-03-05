@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 // internal imports
-import { AuthContent, AuthLeft, AuthRight } from './auth.styled'
+import { AuthContent, AuthLeft, AuthRight } from '../../components/Auth/auth.styled'
 
 const Index = () => {
   return (

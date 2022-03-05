@@ -1,6 +1,3 @@
-// internal imports
-import StyledContainer from '../../components/shared/Container/style'
-
 // external imports 
 import styled from "styled-components"
 
