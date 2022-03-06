@@ -8,13 +8,13 @@ const Index = () => {
   return (
     <AuthContent>
       <AuthLeft>
-         <Image src='/images/auth-bg.jpg' width={10} height={8} layout='responsive' />             
+         <Image src='/images/auth-bg.jpg' width={11} height={8} layout='responsive' />             
       </AuthLeft>
 
       <AuthRight>
-         <h1> Hello </h1>
+         <Image src='/images/devbook-logo.png' width={5} height={2} layout='responsive'  />
       </AuthRight>
-    </AuthContent>
+    </AuthContent> 
   )
 }
 
