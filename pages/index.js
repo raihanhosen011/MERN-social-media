@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import BIcon from '../components/shared/Icon'
+import withAuth from "./HOC/withAuth"
 
-export default function Home() {
+function Home() {
   return (
-    <div >
-      
+    <div>
+       Dashboard
     </div>
   )
 }
+
+export default withAuth(Home)

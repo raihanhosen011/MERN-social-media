@@ -1,0 +1,93 @@
+{
+  "bigImg": "/images/auth-bg.jpg", 
+  "logo": "/images/devbook-logo.png", 
+  
+  "loginTexts" : {
+    "title": "Well-come back",
+    "subtitle": "Login to your account and enjoy",
+    "buttonText" : "Log in",
+    "pera": "Do not have an account?",
+    "to": "/auth/signup"
+  },
+
+  "signupTexts" : {
+    "title": "Heppening now",
+    "subtitle": "Join devbook today.",
+    "buttonText" : "Sign up",
+    "pera": "Already have an account?",
+    "to": "/auth/login"
+  },
+  
+  "loginField" : {
+    "username" : {
+      "label": "Email or username",
+      "placeholder": "enter your email or username",
+      "type": "email",
+      "name":"username",
+      "required": true
+    },
+
+    "password" : {
+      "label": "Password",
+      "placeholder": "enter your password",
+      "type": "password",
+      "name":"password",
+      "required": true
+    }
+  },
+
+  "signupField" : {
+    "fullname" : {
+      "label": "Fullname",
+      "placeholder": "Enter your full name (e.g. Jhon Doe)",
+      "type": "text",
+      "name":"fullname",
+      "required": true
+    },
+    
+    "username" : {
+      "label": "Username",
+      "placeholder": "Enter your username (e.g. jhon011)",
+      "type": "text",
+      "name":"username",
+      "required": true
+    },
+
+    "email" : {
+      "label": "Email",
+      "placeholder": "Enter your email (e.g. jhondoe@gmail.com)",
+      "type": "email",
+      "name":"email",
+      "required": true
+    },
+
+    "password" : {
+      "label": "Password",
+      "placeholder": "Enter your password",
+      "type": "password",
+      "name":"password",
+      "required": true
+    },
+
+    "confirm" : {
+      "label": "Confirm Password",
+      "placeholder": "Re type your password",
+      "type": "password",
+      "name":"confirm",
+      "required": true
+    }
+  },
+
+  "loginInitial": {
+     "username" : "",
+     "password": ""
+  },
+
+  "signupInitial": {
+     "fullname":"",
+     "username":"",
+     "email": "",
+     "password":"",
+     "confirm":""
+  }
+}
