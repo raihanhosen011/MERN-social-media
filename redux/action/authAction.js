@@ -25,16 +25,8 @@ export const signUp = (payload) => async (dispatch) => {
         })
         dispatch({ type : GLOBALTYPES.TOAST, payload : toastData })
     }else{
-        let error = res.data.errors
-
-        if(error.common){
-          dispatch({ type : GLOBALTYPES.ERR_ALERT, payload : { msg: error.common} })  
-        }else{
-          dispatch({
-             type : GLOBALTYPES.ERR_ALERT,
-             payload : { msg : error.signup.msg }
-          })            
-        }
+      let error = res.data.errors
+      dispatch({ type : GLOBALTYPES.ERR_ALERT, payload : {msg : error.common.msg} })  
     }
 
     dispatch({ type : GLOBALTYPES.LOADING, payload : false })
@@ -43,7 +35,7 @@ export const signUp = (payload) => async (dispatch) => {
     dispatch({
       type : GLOBALTYPES.ERR_ALERT,
       payload : {
-        data : err.message
+        data : {msg : err.message}
       }
     })
   }  
@@ -57,7 +49,6 @@ export const signIn = (payload) => async (dispatch) => {
     dispatch({ type : GLOBALTYPES.LOADING, payload : true })
 
     const res = await postData('signin', payload)
-    console.log(res)
 
     if(!res.data.errors){
         dispatch({ 
@@ -73,15 +64,7 @@ export const signIn = (payload) => async (dispatch) => {
         })
     }else{
         let error = res.data.errors
-
-        if(error.common){
-          dispatch({ type : GLOBALTYPES.ERR_ALERT, payload : { msg: error.common} })  
-        }else{
-          dispatch({
-             type : GLOBALTYPES.ERR_ALERT,
-             payload : { msg : error.signin.msg }
-          })            
-        }
+        dispatch({ type : GLOBALTYPES.ERR_ALERT, payload : {msg : error.common.msg} })  
     }
 
     dispatch({ type : GLOBALTYPES.LOADING, payload : false })
@@ -90,7 +73,7 @@ export const signIn = (payload) => async (dispatch) => {
     dispatch({
        type : GLOBALTYPES.ERR_ALERT,
        payload : {
-         data : err.message
+         data : { msg : err.message }
        }
     })
   }  

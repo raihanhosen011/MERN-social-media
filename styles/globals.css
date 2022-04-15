@@ -4,8 +4,8 @@
 /*==================== VARIABLES CSS ====================*/
 :root {
   /*========== Colors ==========*/
-  --first-color: hsl(207, 73%, 61%);
-  --first-color-alt: hsl(207, 57%, 53%);
+  --first-color: hsl(157, 64%, 47%);
+  --first-color-alt: hsl(157, 64%, 39%);
   --first-color-lighter: hsl(207, 92%, 85%);
   
   --title-color: hsl(207, 8%, 15%);
@@ -98,7 +98,7 @@ ul {
 }
 a {
   text-decoration: none;
-  color: rgb(6, 115, 240);
+  color: #2bc48a;
 }
 img {
   max-width: 100%;
@@ -165,7 +165,7 @@ button, input, textarea{
   border-radius: 4px;
   max-width: 465px;
   min-width: 300px;
-  transition: .3s;
+  transition: .6s;
   transform: translateY(10rem);
 }
 

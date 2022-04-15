@@ -7,7 +7,7 @@ function AlertWrapper({ type, children, href, size, open, setOpen }) {
 
   let alertMaterial = {
     success : {title: "Success", icon: "success"},
-    warning : {title: "Warning", icon: "warning"},
+    warning : {title: "Error", icon: "warning"},
     info : {title: "Information", icon: "info"},
   }
 
