@@ -15,31 +15,33 @@ let authController = {
           const newUsername = username.replace(/ /g, '')
           const newPassword = password.replace(/ /g,'').toLowerCase()
 
+          console.log('Hello')
+
           // Checking if user-provided username already exists
           const checked_username = await User.findOne({ username: newUsername })
           if(checked_username){
-            res.status(400).json({
+            return res.status(400).json({
               errors:{
-                signup : {
+                common : {
                   msg : 'this username is already exist!'
                 }
               }
             })
-            return;
           }
 
           // Checking if user-provided email already exists
           const checked_email = await User.findOne({ email })
           if(checked_email){
-            res.status(400).json({
+            return res.status(400).json({
               errors:{
-                signup:{
+                common:{
                   msg : 'this email already exist!'
                 }
               }
             })
-            return;
           }
+
+          console.log("Hi")
 
           if(!checked_email && !checked_username){
              const hashedPassword = await bcrypt.hash(newPassword, 10)
@@ -61,6 +63,8 @@ let authController = {
              })
 
              await newUser.save()
+             
+             console.log(newUser._doc)
 
              res.status(200).json({
                 succesMsg : "registation successfull!",
@@ -73,14 +77,18 @@ let authController = {
           }else{
             res.json({
               errors: {
-                common : "Signup faild!"
+                common : {
+                  msg : "Signup faild!"
+                }
               }
             })
           }
       } catch (err){
         res.json({
           errors : {
-            common : err.message  
+            common : {
+              msg : err.message  
+            }
           }   
         })  
       } 
@@ -104,7 +112,7 @@ let authController = {
         if(!user){
           return res.json({
             errors : {
-              signin : {
+              common : {
                 msg : "this username is not found :("
               }
             }  
@@ -116,7 +124,7 @@ let authController = {
         if (!comparePass) {
           return res.json({
             errors : {
-              signin : {
+              common : {
                 msg : "You entered an incorrect password :("
               }
             }  
@@ -144,7 +152,9 @@ let authController = {
       } catch (err){
         res.json({
           errors : {
-            common : err.message  
+            common : {
+              msg : err.message  
+            }
           }   
         }) 
       }
@@ -161,7 +171,9 @@ let authController = {
      } catch (err){
         res.json({
           errors : {
-            common : err.message  
+            common : {
+              msg : err.message  
+            }
           }   
         }) 
      }
@@ -189,7 +201,9 @@ let authController = {
      } catch (err){
         res.json({
           errors : {
-            common : err.message  
+            common : {
+              msg : err.message  
+            }
           }   
         }) 
      }
