@@ -41,8 +41,8 @@ const Index = () => {
 
       <AuthRight >
           <Image className='logo' src={initial.logo} width={200} height={90} layout='responsive'  />
-          <h1> {texts.title} </h1>
-          <h3> {texts.subtitle} </h3>
+          <h1>{texts.title}</h1>
+          <h3>{texts.subtitle}</h3>
 
           <Formik
             onSubmit={handleSubmit}
