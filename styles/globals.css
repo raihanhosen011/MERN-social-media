@@ -98,6 +98,7 @@ ul {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
   color: #2bc48a;
 }
 img {
@@ -235,6 +236,50 @@ a.external-link svg {
 
 .alert-wrapper.open{
 transform: translateY(0);  
+}
+
+/* ------- COLUMN --------- */
+@media screen and (min-width: 769px){
+  .columns:not(.is-desktop) {
+    display: flex;
+  }
+  .column.is-3, .column.is-3-tablet {
+    flex: none;
+    width: 25%;
+  }
+  .column.is-4, .column.is-4-tablet {
+    flex: none;
+    width: 33%;
+  }
+  .column.is-6, .column.is-6-tablet {
+    flex: none;
+    width: 50%;
+  }
+  .column.is-7, .column.is-7-tablet {
+    flex: none;
+    width: 58%;
+  }
+  .column.is-8, .column.is-8-tablet {
+    flex: none;
+    width: 66%;
+  }
+}
+
+.columns:last-child {
+    margin-bottom: -0.75rem;
+}
+.columns {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    margin-top: -0.75rem;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.75rem;
 }
 
 

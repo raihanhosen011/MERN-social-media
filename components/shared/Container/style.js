@@ -2,16 +2,11 @@
 import styled from "styled-components";
 
 // styled elements
-const StyledContainer = styled.section`
-  padding : var(--mb-1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  & > * {
-    max-width: 1180px;
-    margin: auto;
-  }
+const StyledContainer = styled.div`
+  padding-left : var(--mb-1);
+  padding-right : var(--mb-1);
+  margin: auto;
+  max-width: 1180px;
 `
 
 export default StyledContainer
