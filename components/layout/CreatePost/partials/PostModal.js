@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Picker from 'emoji-picker-react'
+// import Picker from 'emoji-picker-react'
 import { UilImage, UilKid, UilTimes } from '@iconscout/react-unicons'
 
 import Modal from '../../../shared/Modal'
@@ -10,13 +10,13 @@ import { SPostModal, SPostOptionsBar, SMedia, SActivity, SComposeOptions, SCompo
 function PostModal({ open, setOpen }) {
   const [medias, setMedias] = useState([]) 
   const [statusText, setStatusText] = useState('')  
-  const [showEmoji, setShowEmoji] = useState(false)  
+  // const [showEmoji, setShowEmoji] = useState(false)  
   
   // "onEmojiClick" is used to set emoji inside of text
-  function onEmojiClick(e, emojiObject){
-    let newText = statusText + emojiObject.emoji
-    setStatusText(newText)  
-  }
+  // function onEmojiClick(e, emojiObject){
+  //   let newText = statusText + emojiObject.emoji
+  //   setStatusText(newText)  
+  // }
 
   // "handleMedia" is used to show selected media
   function handleMedia(e){
@@ -68,12 +68,12 @@ function PostModal({ open, setOpen }) {
                             <span> Emoji </span>  
                         </SActivity>
 
-                        <SComposeSubmit className='button' disabled={statusText.length === 0} > submit </SComposeSubmit>
+                        <SComposeSubmit className='button' disabled={statusText.length || medias.length === 0} > submit </SComposeSubmit>
 
-                        {showEmoji && <SEmojiPicker>
+                        {/* {showEmoji && <SEmojiPicker>
                             <UilTimes onClick={() => setShowEmoji(false)} />
                             <Picker onEmojiClick={onEmojiClick} />            
-                        </SEmojiPicker>}   
+                        </SEmojiPicker>}    */}
                     </SComposeOptions>  
                 </SPostOptionsBar> 
             </SPostModal>
