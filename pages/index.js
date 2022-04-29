@@ -12,9 +12,6 @@ import { Column, Columns } from '@components/shared/global.styled'
 
 function Home() {
   return (
-    <div>
-       Your Dashboards
-    </div>
     <>
       <Header />
 
