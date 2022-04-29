@@ -1,5 +1,6 @@
 // external imports
 import styled from "styled-components";
+import StyledContainer from "./Container/style";
 
 // styled Elements
 export const Button = styled.button.attrs(() => ({
@@ -22,4 +23,32 @@ export const Button = styled.button.attrs(() => ({
     &:hover {
       background: var(--first-color-alt);
     }
+`
+
+export const Columns = styled.div.attrs(() => ({
+  className: "columns",
+}))``
+
+export const Column = styled.div.attrs(() => ({
+  className: "column",
+}))``
+
+export const SUserBlock = styled.div`
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   font-size: .9rem;
+   
+   h3{
+     font-weight: 500;
+   }
+
+   p{
+     color: var(--color-gray);
+   }
+   
+   small{
+     font-size: 14px;
+     color: #5c5c5c;
+   }
 `
