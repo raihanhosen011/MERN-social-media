@@ -129,7 +129,9 @@ h6 {
 strong{
   font-weight: 600;
 }
-button, input, textarea{
+button, input, textarea, select, option{
+  border: none;
+  outline: none;
   font-family: var(--body-font);
 }
 

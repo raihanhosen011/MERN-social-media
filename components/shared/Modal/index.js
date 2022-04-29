@@ -1,7 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { UilTimes } from '@iconscout/react-unicons'
 
 import { SModal } from './style'
+import Backdrop from './partials/ModalBackdrop'
 
 const Index = ({ handleClose, children }) => {
   
@@ -37,7 +39,7 @@ const Index = ({ handleClose, children }) => {
           exit="exit"
         >
            {children}
-           <button onClick={handleClose}>Close</button>          
+           <UilTimes onClick={handleClose} />
         </SModal>
     </Backdrop>
   );
