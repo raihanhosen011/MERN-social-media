@@ -3,7 +3,7 @@ import withAuth from "./HOC/withAuth"
 function Home() {
   return (
     <div>
-       Dashboard
+       Your Dashboards
     </div>
   )
 }
